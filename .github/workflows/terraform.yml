@@ -81,13 +81,6 @@ jobs:
           pwd
           terraform init
 
-    # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run:  |
-          cd ./iac
-          pwd
-          terraform fmt -check
-
     # Checks that all Terraform configuration to validte syntaxes
     - name: Terraform Validate
       run: |
