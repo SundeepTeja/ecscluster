@@ -43,7 +43,6 @@ module "ecs" {
   max_cc                            = 2
   resource_label                    = "${module.alb.alb_arn_suffix}/${module.alb.alb_tg_arn_suffix}"
   private_subnet_ids                = module.vpc.private_subnet_ids
-  ecr_repo_url                      = module.ecr.ecr_repo_url
   cloudwatch_log_group_arn          = module.cloudwatch.cloudwatch_log_group_arn
   security_groups                   = [module.sg.sg_ecs_id]
 }

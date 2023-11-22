@@ -16,7 +16,6 @@ locals {
 variable "ecs_service_role" {}
 variable "ecs_task_role_arn" {}
 variable "ecs_execution_role_arn" {}
-variable "ecr_repo_url" {}
 variable "cpu" { type = string }
 variable "memory" { type = string }
 variable "dcc" { type = string }

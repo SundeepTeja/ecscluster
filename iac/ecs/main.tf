@@ -22,7 +22,7 @@ resource "aws_ecs_task_definition" "task_def" {
 [
   {
     "name": "${local.name_prefix}",
-    "image": "${var.ecr_repo_url}:latest",
+    "image": "grafana/grafana-oss:latest",
     "essential": true,
     "portMappings": [
       {
@@ -45,35 +45,10 @@ resource "aws_ecs_task_definition" "task_def" {
     "environment": [
         {
             "name": "ENV",
-            "value": "staging"
+            "value": "dev"
         }
       ],
-    "secrets": [
-        {
-            "name": "GF_DATABASE_HOST",
-            "valueFrom": "${local.ssm_ps_np_man}/db_host"
-        },
-        {
-            "name": "GF_DATABASE_TYPE",
-            "valueFrom": "${local.ssm_ps_np_man}/db_type"
-        },
-        {
-            "name": "GF_DATABASE_NAME",
-            "valueFrom": "${local.ssm_ps_np_man}/db_name"
-        },
-        {
-            "name": "GF_DATABASE_USER",
-            "valueFrom": "${local.ssm_ps_np_man}/db_username"
-        },
-        {
-            "name": "GF_DATABASE_PASSWORD",
-            "valueFrom": "${local.ssm_ps_np_man}/db_password"
-        },
-        {
-            "name": "GF_DATABASE_SSL_MODE",
-            "valueFrom": "${local.ssm_ps_np_man}/db_ssl_mode"
-        }
-      ]
+    "secrets": []
     }
 ]
 DEFINITION

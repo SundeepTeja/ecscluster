@@ -12,6 +12,6 @@ locals {
   meta = {
       name_prefix = "test-dev-assignment"
       region_name = "us-east-1"
-      account_id = "388735280486"
+      account_id = "1234567890"
    }
 }
