@@ -7,6 +7,12 @@ terraform {
   }
 }
 
+provider "aws" {
+  region = "us-east-1"
+  access_key = "xxxxxxxxxxxxxxxxxx"
+  secret_key = "xxxxxxxxxxxxxxxxxx"
+}
+
 variable "region" {
   default = "us-east-1"
 }

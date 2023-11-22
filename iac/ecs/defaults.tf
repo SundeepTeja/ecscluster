@@ -9,7 +9,6 @@ locals {
   account_id    = var.meta["account_id"]
   name_prefix   = var.meta["name_prefix"]
   region_name   = var.meta["region_name"]
-  ssm_ps_np_man = var.meta["ssm_ps_np_man"]
 }
 
 
