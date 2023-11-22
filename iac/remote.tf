@@ -7,6 +7,12 @@ terraform {
   }
 }
 
-variable "region" {}
-variable "project" {}
-variable "environ" {}
+variable "region" {
+  default = "us-east-1"
+}
+variable "project" {
+  default = "ecscluster"
+}
+variable "environ" {
+  default = "dev"
+}
