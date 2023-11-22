@@ -53,9 +53,3 @@ module "cloudwatch" {
   tags                              = local.tags
   meta                              = local.meta
 }
-
-module "ecr" {
-  source                            = "./ecr"
-  tags                              = local.tags
-  meta                              = local.meta
-}
